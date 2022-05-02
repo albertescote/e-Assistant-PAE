@@ -3,7 +3,12 @@
     <div class="row align-items-start">
       <div class="col">
         <a class="navbar-brand" href="#">
-          <img src="../assets/images/logo.png" alt="" height="50" class="d-inline-block align-text-top">
+          <img
+            src="../assets/images/logo.png"
+            alt=""
+            height="50"
+            class="d-inline-block align-text-top"
+          />
         </a>
       </div>
       <div class="col">
@@ -15,9 +20,7 @@
     <div class="row align-items-start">
       <div class="col">
         <a routerLink="/login" routerLinkActive="active">
-          <button type="button" class="btn btn-secondary me-3">
-            Login
-          </button>
+          <button type="button" class="btn btn-secondary me-3">Login</button>
         </a>
         <a routerLink="/register" routerLinkActive="active">
           <button type="button" class="btn btn-primary me-3">
@@ -27,11 +30,33 @@
       </div>
       <div class="col">
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
+  </div>
+</nav>
+<nav>
+  <div class="home">
+    <a routerLink="home" routerLinkActive="activeBar">
+      <button type="button" class="navbarHome">
+        PENDENTS DE LA MEVA SIGNATURA
+      </button>
+    </a>
+    <a routerLink="/register" routerLinkActive="activeBar">
+      <button type="button" class="navbarHome">
+        PENDENTS D'ALTRES SIGNATURES PRÈVIES
+      </button>
+    </a>
+    <a routerLink="/register" routerLinkActive="activeBar">
+      <button type="button" class="navbarHome">PROCESADES</button>
+    </a>
   </div>
 </nav>
 <router-outlet></router-outlet>
