@@ -1,43 +1,21 @@
 <nav class="navbar navbar-light bg-light">
-  <div class="container-fluid align-items-center mx-5">
-    <div class="row align-items-start">
-      <div class="col">
-        <a class="navbar-brand" href="#">
-          <img
-            src="../assets/images/logo.png"
-            alt=""
-            height="50"
-            class="d-inline-block align-text-top"
-          />
-        </a>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-auto">
+        <div class="row justify-content-md-start ms-5">
+          <div class="col-auto">
+            <a class="navbar-brand" href="#">
+              <img src="../assets/images/portarfirmas.png" alt="" height="50" class="d-inline-block align-text-top">
+            </a>
+          </div>
+          <div class="col-auto pt-2">
+            <h1>e-Assistant</h1>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <a class="navbar-brand" href="#">
-          <h1>e-Assitant</h1>
-        </a>
-      </div>
-    </div>
-    <div class="row align-items-start">
-      <div class="col">
-        <a routerLink="/login" routerLinkActive="active">
-          <button type="button" class="btn btn-secondary me-3">Login</button>
-        </a>
-        <a routerLink="/register" routerLinkActive="active">
-          <button type="button" class="btn btn-primary me-3">
-            Sign up for free
-          </button>
-        </a>
-      </div>
-      <div class="col">
-        <form class="d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+      <div class="col-auto pt-2" style="margin-left: 1325px">
+        <a routerLink="/login" routerLinkActive="active" class="btn btn-outline-secondary me-3" role="button">Login</a>
+        <a routerLink="/register" routerLinkActive="active" class="btn btn-outline-primary me-3" role="button">Sign up for free</a>
       </div>
     </div>
   </div>
