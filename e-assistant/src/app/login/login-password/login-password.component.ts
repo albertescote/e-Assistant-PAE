@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { Router } from '@angular/router';
+import {AppComponent} from '../../app.component';
 
 @Component({
   selector: "app-login-password",
@@ -9,10 +11,10 @@ export class LoginPasswordComponent {
   email!: string;
   password!: string;
 
-  constructor() {}
+  constructor(private router: Router, private appComponent: AppComponent) {}
 
   login() {
-    console.log(this.email);
-    console.log(this.password);
+    this.appComponent.userLogged();
+    this.router.navigateByUrl('/pending-my-signature');
   }
 }

@@ -1,6 +1,6 @@
-// register.component.ts
-
 import { Component } from "@angular/core";
+import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: "app-register",
@@ -12,10 +12,10 @@ export class RegisterComponent {
   password!: string;
   confirmPassword!: string;
 
-  constructor() {}
+  constructor(private router: Router, private appComponent: AppComponent) {}
 
   register() {
-    console.log(this.email);
-    console.log(this.password);
+    this.appComponent.userLogged();
+    this.router.navigateByUrl('/pending-my-signature');
   }
 }

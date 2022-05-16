@@ -1,40 +1,24 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-auto">
-        <div class="row justify-content-md-start ms-5">
-          <div class="col-auto">
-            <a class="navbar-brand" href="#">
-              <img src="../assets/images/portarfirmas.png" alt="" height="50" class="d-inline-block align-text-top">
-            </a>
-          </div>
-          <div class="col-auto pt-2">
-            <h1>e-Assistant</h1>
-          </div>
-        </div>
-      </div>
-      <div class="col-auto pt-2" style="margin-left: 1325px">
-        <a routerLink="/login" routerLinkActive="active" class="btn btn-outline-secondary me-3" role="button">Login</a>
-        <a routerLink="/register" routerLinkActive="active" class="btn btn-outline-primary me-3" role="button">Sign up for free</a>
-      </div>
+    <a class="navbar-brand" href="#">
+      <img src="../assets/images/portarfirmas.png" height="50px" class="ps-2">
+    </a>
+    <div *ngIf="userLoggedIn; else userloggedOut">
+      <form class="d-flex">
+        <a routerLink="/pending-my-signature" routerLinkActive="active" class="btn btn-outline-secondary me-3" role="button">Pendents de la meva signatura</a>
+        <a routerLink="/pending-other-signatures" routerLinkActive="active" class="btn btn-outline-secondary me-3" role="button">Pendents d'altres signatures</a>
+        <a routerLink="/processed" routerLinkActive="active" class="btn btn-outline-secondary me-3" role="button">Processades</a>
+        <button (click)="refresh()" class="btn me-3" role="button">
+          <img href="/" src="../assets/images/refresh.png" height="25px">
+        </button>
+      </form>
     </div>
-  </div>
-</nav>
-<nav>
-  <div class="home">
-    <a routerLink="home" routerLinkActive="activeBar">
-      <button type="button" class="navbarHome">
-        PENDENTS DE LA MEVA SIGNATURA
-      </button>
-    </a>
-    <a routerLink="/register" routerLinkActive="activeBar">
-      <button type="button" class="navbarHome">
-        PENDENTS D'ALTRES SIGNATURES PRÈVIES
-      </button>
-    </a>
-    <a routerLink="/register" routerLinkActive="activeBar">
-      <button type="button" class="navbarHome">PROCESADES</button>
-    </a>
+    <ng-template #userloggedOut>
+      <form class="d-flex">
+        <a routerLink="/login" routerLinkActive="active" class="btn btn-outline-secondary me-3" role="button">Inicia la sessió</a>
+        <a routerLink="/register" routerLinkActive="active" class="btn btn-outline-primary me-3" role="button">Registra't gratuïtament</a>
+      </form>
+    </ng-template>
   </div>
 </nav>
 <router-outlet></router-outlet>
