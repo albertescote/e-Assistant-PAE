@@ -16,6 +16,6 @@ export class RegisterComponent {
 
   register() {
     this.appComponent.userLogged();
-    this.router.navigateByUrl('/pending-my-signature');
+    this.router.navigateByUrl('/login-password');
   }
 }

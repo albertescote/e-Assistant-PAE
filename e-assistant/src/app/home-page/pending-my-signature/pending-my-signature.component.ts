@@ -12,4 +12,8 @@ export class PendingMySignatureComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeToDocument(): void {
+    
+  }
+
 }
