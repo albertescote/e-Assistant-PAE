@@ -12,21 +12,83 @@
   <script src="../node_modules/jquery/dist/jquery.js"></script>  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>  
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script>
-    function changeTabSumm(){
-      document.getElementById("tabDoc").setAttribute("class", "nav-link")
-      document.getElementById("tabSummary").setAttribute("class", "nav-link active")
+    function changeTabSumm1(){
+      document.getElementById("tabDoc1").setAttribute("class", "nav-link")
+      document.getElementById("tabSummary1").setAttribute("class", "nav-link active")
       document.getElementById("doc1Summary").style.display = "flex";
       document.getElementById("doc1Doc").style.display = "none";
     }
-    function changeTabDoc(){
-      document.getElementById("tabSummary").setAttribute("class", "nav-link")
-      document.getElementById("tabDoc").setAttribute("class", "nav-link active")
+    function changeTabSumm2(){
+      document.getElementById("tabDoc2").setAttribute("class", "nav-link")
+      document.getElementById("tabSummary2").setAttribute("class", "nav-link active")
+      document.getElementById("doc2Summary").style.display = "flex";
+      document.getElementById("doc2Doc").style.display = "none";
+    }
+    function changeTabSumm3(){
+      document.getElementById("tabDoc3").setAttribute("class", "nav-link")
+      document.getElementById("tabSummary3").setAttribute("class", "nav-link active")
+      document.getElementById("doc3Summary").style.display = "flex";
+      document.getElementById("doc3Doc").style.display = "none";
+    }
+    function changeTabDoc1(){
+      document.getElementById("tabSummary1").setAttribute("class", "nav-link")
+      document.getElementById("tabDoc1").setAttribute("class", "nav-link active")
       document.getElementById("doc1Summary").style.display = "none";
       document.getElementById("doc1Doc").style.display = "block";
     }
-    function displayDoc(){
+    function changeTabDoc2(){
+      document.getElementById("tabSummary2").setAttribute("class", "nav-link")
+      document.getElementById("tabDoc2").setAttribute("class", "nav-link active")
+      document.getElementById("doc2Summary").style.display = "none";
+      document.getElementById("doc2Doc").style.display = "block";
+    }
+    function changeTabDoc3(){
+      document.getElementById("tabSummary3").setAttribute("class", "nav-link")
+      document.getElementById("tabDoc3").setAttribute("class", "nav-link active")
+      document.getElementById("doc3Summary").style.display = "none";
+      document.getElementById("doc3Doc").style.display = "block";
+    }
+    function displayDoc1(){
       document.getElementById("doc1").style.display = "flex";
       document.getElementById("doc1Summary").style.display = "flex";
+      document.getElementById("tabDoc1").setAttribute("class", "nav-link")
+      document.getElementById("tabSummary1").setAttribute("class", "nav-link active")
+      
+      document.getElementById("doc2").style.display = "none";
+      document.getElementById("doc2Summary").style.display = "none";
+      document.getElementById("doc2Doc").style.display = "none";
+
+      document.getElementById("doc3").style.display = "none";
+      document.getElementById("doc3Summary").style.display = "none";
+      document.getElementById("doc3Doc").style.display = "none";
+    }
+    function displayDoc2(){
+      document.getElementById("doc1").style.display = "none";
+      document.getElementById("doc1Summary").style.display = "none";
+      document.getElementById("doc1Doc").style.display = "none";
+
+      document.getElementById("doc2").style.display = "flex";
+      document.getElementById("doc2Summary").style.display = "flex";
+      document.getElementById("tabDoc2").setAttribute("class", "nav-link")
+      document.getElementById("tabSummary2").setAttribute("class", "nav-link active")
+
+      document.getElementById("doc3").style.display = "none";
+      document.getElementById("doc3Summary").style.display = "none";
+      document.getElementById("doc3Doc").style.display = "none";
+    }
+    function displayDoc3(){
+      document.getElementById("doc1").style.display = "none";
+      document.getElementById("doc1Summary").style.display = "none";
+      document.getElementById("doc1Doc").style.display = "none";
+
+      document.getElementById("doc2").style.display = "none";
+      document.getElementById("doc2Summary").style.display = "none";
+      document.getElementById("doc2Doc").style.display = "none";
+
+      document.getElementById("doc3").style.display = "flex";
+      document.getElementById("doc3Summary").style.display = "flex";
+      document.getElementById("tabDoc3").setAttribute("class", "nav-link")
+      document.getElementById("tabSummary3").setAttribute("class", "nav-link active")
     }
   </script>
 </head>

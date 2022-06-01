@@ -17,13 +17,43 @@ export class PendingMySignatureComponent implements OnInit {
     PSPDFKit.load({
         baseUrl: location.protocol + "//" + location.host + "/assets/",
         document: "../../../assets/pdf/diptic-informatiu-gei-ca-br.pdf",
-        container: ".pspdfkit-container"
+        container: ".doc1"
+      }).then((instance) => {
+        (<any>window).instance = instance;
+      });
+
+    PSPDFKit.load({
+        baseUrl: location.protocol + "//" + location.host + "/assets/",
+        document: "../../../assets/pdf/diptic-informatiu-gei-ca-br.pdf",
+        container: ".doc2"
+      }).then((instance) => {
+        (<any>window).instance = instance;
+      });
+
+    PSPDFKit.load({
+        baseUrl: location.protocol + "//" + location.host + "/assets/",
+        document: "../../../assets/pdf/diptic-informatiu-gei-ca-br.pdf",
+        container: ".doc3"
       }).then((instance) => {
         (<any>window).instance = instance;
       });
   }
 
-  signDocument(): void {
+  signDocument1(): void {
+    const httpOptions = {
+ 	 	headers: new HttpHeaders()
+	  }
+    httpOptions.headers.append('Access-Control-Allow-Origin', '*');
+    this.http.post('http://localhost:5000/sign', null, httpOptions).subscribe();
+  }
+  signDocument2(): void {
+    const httpOptions = {
+ 	 	headers: new HttpHeaders()
+	  }
+    httpOptions.headers.append('Access-Control-Allow-Origin', '*');
+    this.http.post('http://localhost:5000/sign', null, httpOptions).subscribe();
+  }
+  signDocument3(): void {
     const httpOptions = {
  	 	headers: new HttpHeaders()
 	  }

@@ -22,7 +22,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="clickable-row" onclick="displayDoc()">
+                <tr class="clickable-row" onclick="displayDoc1()">
                   <th scope="row">1</th>
                   <td>Conveni Port de Barcelona</td>
                   <td>
@@ -30,7 +30,7 @@
                   </td>
                   <td>02/05/2022</td>
                 </tr>
-                <tr class="clickable-row">
+                <tr class="clickable-row" onclick="displayDoc2()">
                   <th scope="row">2</th>
                   <td>Factura compra maquinària</td>
                   <td>
@@ -38,7 +38,7 @@
                   </td>
                   <td>15/04/2022</td>
                 </tr>
-                <tr class="clickable-row">
+                <tr class="clickable-row" onclick="displayDoc3()">
                   <th scope="row">3</th>
                   <td>Factura llum oficina</td>
                   <td>
@@ -60,21 +60,59 @@
             <div>
               <ul class="nav nav-tabs" id="doc1" style="display: none;">
                 <li class="nav-item">
-                  <a id="tabSummary" class="nav-link active" onclick="changeTabSumm()" aria-current="page">Resum</a>
+                  <a id="tabSummary1" class="nav-link active" onclick="changeTabSumm1()" aria-current="page">Resum</a>
                 </li>
                 <li class="nav-item">
-                  <a id="tabDoc" class="nav-link" onclick="changeTabDoc()">Document</a>
+                  <a id="tabDoc1" class="nav-link" onclick="changeTabDoc1()">Document</a>
+                </li>
+              </ul>
+              <ul class="nav nav-tabs" id="doc2" style="display: none;">
+                <li class="nav-item">
+                  <a id="tabSummary2" class="nav-link active" onclick="changeTabSumm2()" aria-current="page">Resum</a>
+                </li>
+                <li class="nav-item">
+                  <a id="tabDoc2" class="nav-link" onclick="changeTabDoc2()">Document</a>
+                </li>
+              </ul>
+              <ul class="nav nav-tabs" id="doc3" style="display: none;">
+                <li class="nav-item">
+                  <a id="tabSummary3" class="nav-link active" onclick="changeTabSumm3()" aria-current="page">Resum</a>
+                </li>
+                <li class="nav-item">
+                  <a id="tabDoc3" class="nav-link" onclick="changeTabDoc3()">Document</a>
                 </li>
               </ul>
             </div>
           <div>
           <div id="doc1Summary" style="display: none;">
-            <!-- <h1 class="my-2">Sóc un resum</h1> -->
+            <h1 class="my-2">Sóc el resum 1</h1>
+          </div>
+          <div id="doc2Summary" style="display: none;">
+            <h1 class="my-2">Sóc el resum 2</h1>
+          </div>
+          <div id="doc3Summary" style="display: none;">
+            <h1 class="my-2">Sóc el resum 3</h1>
           </div>
           <div id="doc1Doc" style="display: none;" class="container">
-            <div class="my-3 pspdfkit-container" style="height: 525px;"></div>
+            <div class="my-3 doc1" style="height: 525px;"></div>
             <div>
-              <button type="button" class="row btn btn-outline-primary ms-1" (click)="signDocument()">
+              <button type="button" class="row btn btn-outline-primary ms-1" (click)="signDocument1()">
+                Firmar
+              </button>
+            </div>
+          </div>
+          <div id="doc2Doc" style="display: none;" class="container">
+            <div class="my-3 doc2" style="height: 525px;"></div>
+            <div>
+              <button type="button" class="row btn btn-outline-primary ms-1" (click)="signDocument2()">
+                Firmar
+              </button>
+            </div>
+          </div>
+          <div id="doc3Doc" style="display: none;" class="container">
+            <div class="my-3 doc3" style="height: 525px;"></div>
+            <div>
+              <button type="button" class="row btn btn-outline-primary ms-1" (click)="signDocument3()">
                 Firmar
               </button>
             </div>
