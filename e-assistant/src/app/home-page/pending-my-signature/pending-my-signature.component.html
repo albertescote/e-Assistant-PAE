@@ -1,123 +1,281 @@
 <div class="container-fulid mx-5 my-5">
-    <div class="row justify-content-between">
-      <div class="col-4 border border-info border-2 rounded" style="height: 750px;">
-        <div class="d-flex flex-column bd-highlight my-3">
-          <div class="p-2 bd-highlight">
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Escriu alguna cosa" aria-label="Search">
-              <button class="btn btn-info" type="submit">
-                <img height="25" src="../../assets/images/search-svgrepo-com.svg" />
-              </button>
-            </form>
-          </div>
-          <div class="p-2 bd-highlight">
-            <h1 class="headerResults">Pendents de la meva signatura</h1>
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Petició</th>
-                  <th scope="col">Estat</th>
-                  <th scope="col">Data de la signatura</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="clickable-row" onclick="displayDoc1()">
-                  <th scope="row">1</th>
-                  <td>Conveni Port de Barcelona</td>
-                  <td>
-                    <img src="../../../assets/images/icons8-autograph-50_1.png" height="25">
-                  </td>
-                  <td>02/05/2022</td>
-                </tr>
-                <tr class="clickable-row" onclick="displayDoc2()">
-                  <th scope="row">2</th>
-                  <td>Factura compra maquinària</td>
-                  <td>
-                    <img src="../../../assets/images/icons8-autograph-50_1.png" height="25">
-                  </td>
-                  <td>15/04/2022</td>
-                </tr>
-                <tr class="clickable-row" onclick="displayDoc3()">
-                  <th scope="row">3</th>
-                  <td>Factura llum oficina</td>
-                  <td>
-                    <img src="../../../assets/images/icons8-autograph-50_1.png" height="25">
-                  </td>
-                  <td>23/04/2022</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+  <div class="row justify-content-between">
+    <div
+      class="col-4 border border-info border-2 rounded"
+      style="height: 750px"
+    >
+      <div class="d-flex flex-column bd-highlight my-3">
+        <div class="p-2 bd-highlight">
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Escriu alguna cosa"
+              aria-label="Search"
+            />
+            <button class="btn btn-info" type="submit">
+              <img
+                height="25"
+                src="../../assets/images/search-svgrepo-com.svg"
+              />
+            </button>
+          </form>
+        </div>
+        <div class="p-2 bd-highlight">
+          <h1 class="headerResults">Pendents de la meva signatura</h1>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Petició</th>
+                <th scope="col">Estat</th>
+                <th scope="col">Data de la signatura</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="clickable-row" onclick="displayDoc1()">
+                <th scope="row">1</th>
+                <td>Conveni Port de Barcelona</td>
+                <td>
+                  <img
+                    src="../../../assets/images/icons8-autograph-50_1.png"
+                    height="25"
+                  />
+                </td>
+                <td>02/05/2022</td>
+              </tr>
+              <tr class="clickable-row" onclick="displayDoc2()">
+                <th scope="row">2</th>
+                <td>Factura compra maquinària</td>
+                <td>
+                  <img
+                    src="../../../assets/images/icons8-autograph-50_1.png"
+                    height="25"
+                  />
+                </td>
+                <td>15/04/2022</td>
+              </tr>
+              <tr class="clickable-row" onclick="displayDoc3()">
+                <th scope="row">3</th>
+                <td>Factura llum oficina</td>
+                <td>
+                  <img
+                    src="../../../assets/images/icons8-autograph-50_1.png"
+                    height="25"
+                  />
+                </td>
+                <td>23/04/2022</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="col-7 border border-info border-2 rounded">
-        <div class="d-flex flex-column bd-highlight my-3">
-          <div class="p-2 bd-highlight">
-            <h1 class="headerResults">Resum i documents a signar</h1>
-          </div>
-          <div class="p-2 bd-highlight">
-            <div>
-              <ul class="nav nav-tabs" id="doc1" style="display: none;">
-                <li class="nav-item">
-                  <a id="tabSummary1" class="nav-link active" onclick="changeTabSumm1()" aria-current="page">Resum</a>
-                </li>
-                <li class="nav-item">
-                  <a id="tabDoc1" class="nav-link" onclick="changeTabDoc1()">Document</a>
-                </li>
-              </ul>
-              <ul class="nav nav-tabs" id="doc2" style="display: none;">
-                <li class="nav-item">
-                  <a id="tabSummary2" class="nav-link active" onclick="changeTabSumm2()" aria-current="page">Resum</a>
-                </li>
-                <li class="nav-item">
-                  <a id="tabDoc2" class="nav-link" onclick="changeTabDoc2()">Document</a>
-                </li>
-              </ul>
-              <ul class="nav nav-tabs" id="doc3" style="display: none;">
-                <li class="nav-item">
-                  <a id="tabSummary3" class="nav-link active" onclick="changeTabSumm3()" aria-current="page">Resum</a>
-                </li>
-                <li class="nav-item">
-                  <a id="tabDoc3" class="nav-link" onclick="changeTabDoc3()">Document</a>
-                </li>
-              </ul>
-            </div>
+    </div>
+    <div class="col-7 border border-info border-2 rounded">
+      <div class="d-flex flex-column bd-highlight my-3">
+        <div class="p-2 bd-highlight">
+          <h1 class="headerResults">Resum i documents a signar</h1>
+        </div>
+        <div class="p-2 bd-highlight">
           <div>
-          <div id="doc1Summary" style="display: none;">
-            <h1 class="my-2">Sóc el resum 1</h1>
+            <ul class="nav nav-tabs" id="doc1" style="display: none">
+              <li class="nav-item">
+                <a
+                  id="tabSummary1"
+                  class="nav-link active"
+                  onclick="changeTabSumm1()"
+                  aria-current="page"
+                  >Resum</a
+                >
+              </li>
+              <li class="nav-item">
+                <a id="tabDoc1" class="nav-link" onclick="changeTabDoc1()"
+                  >Document</a
+                >
+              </li>
+            </ul>
+            <ul class="nav nav-tabs" id="doc2" style="display: none">
+              <li class="nav-item">
+                <a
+                  id="tabSummary2"
+                  class="nav-link active"
+                  onclick="changeTabSumm2()"
+                  aria-current="page"
+                  >Resum</a
+                >
+              </li>
+              <li class="nav-item">
+                <a id="tabDoc2" class="nav-link" onclick="changeTabDoc2()"
+                  >Document</a
+                >
+              </li>
+            </ul>
+            <ul class="nav nav-tabs" id="doc3" style="display: none">
+              <li class="nav-item">
+                <a
+                  id="tabSummary3"
+                  class="nav-link active"
+                  onclick="changeTabSumm3()"
+                  aria-current="page"
+                  >Resum</a
+                >
+              </li>
+              <li class="nav-item">
+                <a id="tabDoc3" class="nav-link" onclick="changeTabDoc3()"
+                  >Document</a
+                >
+              </li>
+            </ul>
           </div>
-          <div id="doc2Summary" style="display: none;">
-            <h1 class="my-2">Sóc el resum 2</h1>
-          </div>
-          <div id="doc3Summary" style="display: none;">
-            <h1 class="my-2">Sóc el resum 3</h1>
-          </div>
-          <div id="doc1Doc" style="display: none;" class="container">
-            <div class="my-3 doc1" style="height: 525px;"></div>
-            <div>
-              <button type="button" class="row btn btn-outline-primary ms-1" (click)="signDocument1()">
-                Firmar
-              </button>
+          <div>
+            <div id="doc1Summary" style="display: none">
+              <ul class="docList">
+                <li class="docInformation">
+                  <strong>Concepte: </strong>
+                  <span>Conveni Port de Barcelona</span>
+                </li>
+                <li class="docInformation">
+                  <strong>Data: </strong>
+                  <span>02/05/2022</span>
+                </li>
+              </ul>
+              <h2 class="signing">Signants</h2>
+              <div class="signingPeople">
+                <span>ALBERT ESCOTE ALVAREZ</span>
+                <div style="padding-right: 2em">
+                  <img
+                    src="../../../assets/images/icons8-assessments-32.png"
+                    height="25"
+                  />
+                  <span class="pendingSign">Pendent</span>
+                </div>
+              </div>
+              <div class="signingPeople">
+                <span>RUBEN MONTAGUT PELLISSA</span>
+                <div style="padding-right: 2.85em">
+                  <img
+                    src="../../../assets/images/icons8-assessments-32_1.png"
+                    height="25"
+                  />
+                  <span style="padding-top: 5px" class="doneSign">Signat</span>
+                </div>
+              </div>
+              <div class="signingPeople">
+                <span>ALEIX VELASCO CALVO</span>
+                <div style="padding-right: 2.85em">
+                  <img
+                    src="../../../assets/images/icons8-assessments-32_1.png"
+                    height="25"
+                  />
+                  <span style="padding-top: 5px" class="doneSign">Signat</span>
+                </div>
+              </div>
+              <div class="signingPeople">
+                <span>IGNATIUS SHOWMYO COSTA D'CRUZE</span>
+                <div style="padding-right: 2.85em">
+                  <img
+                    src="../../../assets/images/icons8-assessments-32_1.png"
+                    height="25"
+                  />
+                  <span style="padding-top: 5px" class="doneSign">Signat</span>
+                </div>
+              </div>
             </div>
-          </div>
-          <div id="doc2Doc" style="display: none;" class="container">
-            <div class="my-3 doc2" style="height: 525px;"></div>
-            <div>
-              <button type="button" class="row btn btn-outline-primary ms-1" (click)="signDocument2()">
-                Firmar
-              </button>
+            <div id="doc2Summary" style="display: none">
+              <ul class="docList">
+                <li class="docInformation">
+                  <strong>Concepte: </strong>
+                  <span>Factura compra maquinària</span>
+                </li>
+                <li class="docInformation">
+                  <strong>Data: </strong>
+                  <span>15/04/2022</span>
+                </li>
+              </ul>
+              <h2 class="signing">Signants</h2>
+              <div class="signingPeople">
+                <span>ALBERT ESCOTE ALVAREZ</span>
+                <div style="padding-right: 2em">
+                  <img
+                    src="../../../assets/images/icons8-assessments-32.png"
+                    height="25"
+                  />
+                  <span class="pendingSign">Pendent</span>
+                </div>
+              </div>
             </div>
-          </div>
-          <div id="doc3Doc" style="display: none;" class="container">
-            <div class="my-3 doc3" style="height: 525px;"></div>
-            <div>
-              <button type="button" class="row btn btn-outline-primary ms-1" (click)="signDocument3()">
-                Firmar
-              </button>
+            <div id="doc3Summary" style="display: none">
+              <ul class="docList">
+                <li class="docInformation">
+                  <strong>Concepte: </strong>
+                  <span>Factura llum oficina</span>
+                </li>
+                <li class="docInformation">
+                  <strong>Data: </strong>
+                  <span>23/04/2022</span>
+                </li>
+              </ul>
+              <h2 class="signing">Signants</h2>
+              <div class="signingPeople">
+                <span>ALBERT ESCOTE ALVAREZ</span>
+                <div style="padding-right: 2em">
+                  <img
+                    src="../../../assets/images/icons8-assessments-32.png"
+                    height="25"
+                  />
+                  <span class="pendingSign">Pendent</span>
+                </div>
+              </div>
+              <div class="signingPeople">
+                <span>ALEIX VELASCO CALVO</span>
+                <div style="padding-right: 2em">
+                  <img
+                    src="../../../assets/images/icons8-assessments-32.png"
+                    height="25"
+                  />
+                  <span class="pendingSign">Pendent</span>
+                </div>
+              </div>
+            </div>
+            <div id="doc1Doc" style="display: none" class="container">
+              <div class="my-3 doc1" style="height: 525px"></div>
+              <div>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg"
+                  (click)="signDocument1()"
+                >
+                  Firmar
+                </button>
+              </div>
+            </div>
+            <div id="doc2Doc" style="display: none" class="container">
+              <div class="my-3 doc2" style="height: 525px"></div>
+              <div>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg"
+                  (click)="signDocument2()"
+                >
+                  Firmar
+                </button>
+              </div>
+            </div>
+            <div id="doc3Doc" style="display: none" class="container">
+              <div class="my-3 doc3" style="height: 525px"></div>
+              <div>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg"
+                  (click)="signDocument3()"
+                >
+                  Firmar
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
