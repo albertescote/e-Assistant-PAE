@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
   title = 'e-assistant';
   userLoggedIn!: boolean;
   userloggedOut!: boolean;
@@ -22,7 +23,11 @@ export class AppComponent implements OnInit {
     this.userloggedOut = false;
   }
 
-  refresh() {
-    this.router.navigateByUrl('/pending-my-signature');
+  refresh(): void {
+    const httpOptions = {
+      headers: new HttpHeaders(),
+    };
+    httpOptions.headers.append('Access-Control-Allow-Origin', '*');
+    this.http.post('http://localhost:5000/sync', null, httpOptions).subscribe();
   }
 }

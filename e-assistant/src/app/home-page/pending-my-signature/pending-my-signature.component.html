@@ -33,7 +33,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="clickable-row" onclick="displayDoc1()">
+              <tr id="row1" class="clickable-row" onclick="displayDoc1()">
                 <th scope="row">1</th>
                 <td>Conveni Port de Barcelona</td>
                 <td>
@@ -44,7 +44,7 @@
                 </td>
                 <td>02/05/2022</td>
               </tr>
-              <tr class="clickable-row" onclick="displayDoc2()">
+              <tr id="row2" class="clickable-row" onclick="displayDoc2()">
                 <th scope="row">2</th>
                 <td>Factura compra maquinària</td>
                 <td>
@@ -55,7 +55,7 @@
                 </td>
                 <td>15/04/2022</td>
               </tr>
-              <tr class="clickable-row" onclick="displayDoc3()">
+              <tr id="row3" class="clickable-row" onclick="displayDoc3()">
                 <th scope="row">3</th>
                 <td>Factura llum oficina</td>
                 <td>
@@ -185,6 +185,7 @@
                   type="button"
                   class="btn btn-primary btn-lg"
                   (click)="signDocument1()"
+                  onclick="signDoc1()"
                 >
                   Firmar
                 </button>
@@ -217,6 +218,7 @@
                   type="button"
                   class="btn btn-primary btn-lg"
                   (click)="signDocument2()"
+                  onclick="signDoc2()"
                 >
                   Firmar
                 </button>
@@ -259,6 +261,7 @@
                   type="button"
                   class="btn btn-primary btn-lg"
                   (click)="signDocument3()"
+                  onclick="signDoc3()"
                 >
                   Firmar
                 </button>
@@ -271,6 +274,7 @@
                   type="button"
                   class="btn btn-primary btn-lg"
                   (click)="signDocument1()"
+                  onclick="signDoc1()"
                 >
                   Firmar
                 </button>
@@ -283,6 +287,7 @@
                   type="button"
                   class="btn btn-primary btn-lg"
                   (click)="signDocument2()"
+                  onclick="signDoc2()"
                 >
                   Firmar
                 </button>
@@ -295,6 +300,7 @@
                   type="button"
                   class="btn btn-primary btn-lg"
                   (click)="signDocument3()"
+                  onclick="signDoc3()"
                 >
                   Firmar
                 </button>
