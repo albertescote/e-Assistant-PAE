@@ -1,4 +1,4 @@
-Aleix Velasco Calvo
-Rubén Montagut Pellissa
-Ignatius Costa D'Cruze
-Albert Escoté Alvarez
+Aleix Velasco Calvo\n
+Rubén Montagut Pellissa\n
+Ignatius Costa D'Cruze\n
+Albert Escoté Alvarez\n
